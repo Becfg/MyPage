@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡片</title>
+    <style>
+        * {
+            border: 1px solid black;
+        }
+
+        body {
+            background-color: rgb(226, 226, 226);
+        }
+
+
+        .container {
+            display: flex;
+            padding: 50px;
+        }
+
+
+        .card {
+            margin: 20px;
+            perspective: 285px;
+        }
+
+        .card>img {
+            border: 2px solid black;
+            width: 100px;
+            height: 120px;
+            transition: all 0.2s;
+            transition-timing-function: ease-out;
+            /* transform: scale(2) ;
+            box-shadow: 14px 11px 58px black; */
+            filter: brightness(100%);
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="./img/ryo.jpg" alt="ryo">
+        </div>
+        <div class="card">
+            <img src="./img/gt.jpg" alt="gt">
+        </div>
+    </div>
+</body>
+
+<script>
+    let img = document.querySelectorAll('.card > img')
+
+    img.forEach(item => {
+        item.onmousemove = function (e) {
+            let x = e.offsetX;
+            let y = e.offsetY;
+            let rX = -(y - 60) / 2;
+            let rY = (x * 1.2 - 50) / 2;
+            let brightness = -(40 / 120) * y + 120;
+            console.log(x, y, brightness);
+            item.style.transform = `translateZ(120px)  rotateX(${rX}deg) rotateY(${rY}deg)`;
+            item.style.filter = `brightness(${brightness}%)`;
+            item.style.boxShadow = '14px 11px 58px black';
+        }
+        item.onmouseout = function () {
+            item.style.transform = '';
+            item.style.filter = '';
+            item.style.boxShadow = '';
+        }
+    });
+
+</script>
+
+</html>

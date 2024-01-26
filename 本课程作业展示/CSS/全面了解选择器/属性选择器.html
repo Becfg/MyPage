@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="digeset mystory">
+        <h1 title="我的-故事">我的故事</h1>
+        <h1 title="我的故事副标题">---我的青春岁月</h1>
+        <p>第一段正文</p>
+        <p>第二段正文</p>
+        <p title="故事第三段">第三段正文</p>
+    </div>
+
+    <style>
+        /* 存在匹配 */
+        h1[title |="我的"] {
+            color: red;
+        }
+
+        [class~="mystory"] {
+            border: 1px green dashed;
+        }
+
+        /* 子串匹配 */
+        /* 开头 */
+        [title^="故事"] {
+            color: red;
+        }
+
+        /* 结尾 */
+        [title$="故事"] {
+            color: red;
+        }
+
+        /* 任意 */
+        [title*="故事"] {
+            color: red;
+        }
+    </style>
+</body>
+
+</html>

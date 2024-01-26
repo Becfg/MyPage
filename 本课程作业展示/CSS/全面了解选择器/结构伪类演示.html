@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>h1</h1>
+<p>p1</p>
+<h2>h2</h2>
+<p>p2</p>
+<h3>h3</h3>
+<p>p3</p>
+
+    <style>
+        p:first-child{/* 子元素第一个 */
+            color:red;
+        }
+        p:first-of-type{/* 同类型第一个 */
+            color: blue;
+        }
+        p:last-child{/* 子元素最后一个  */
+            color: green;
+        }
+        p:last-of-type{/* 同类型最后一个 */
+            color: pink;
+        }
+        p:nth-child(2n+1){/* 子元素第?个 */
+            color: aqua;
+        }
+        p:nth-of-type(2n){/* 同类型第?个 */
+            color: aquamarine;
+        }
+    </style>
+</body>
+</html>
