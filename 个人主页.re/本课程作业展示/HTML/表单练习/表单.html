@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>预约入校</title>
+</head>
+<body>
+    <form action="./提交.html" >
+        <label for="姓名">
+            姓名:<input type="text" name="姓名" id="姓名">
+        </label>
+
+        <br>
+
+        性别: 
+        <label for="男">
+            <input type="radio" name="性別" id="男" value="男" checked="checked">男
+        </label>
+        <label for="女">
+            <input type="radio" name="性別" id="女" value="女">女
+        </label>
+        <br>
+
+        电话:<input type="tel" name="电话" maxlength="11" placeholder="请输入电话号码"><br>
+        身份证号:<input type="text" name="身份证号" maxlength="18" placeholder="请输入身份证号"><br>
+        同行人姓名:<input type="text" name="同行人" placeholder="请输入姓名"><br>
+        车牌号:<input type="text" name="车牌号" placeholder="请输入车牌号"><br>
+        来访日期:<input type="date" name="来访日期"><br>
+        来访时间:<input type="time" name="来访时间"><br>
+        来访原因:<select name="来访原因">
+            <option value="公务">公务</option>
+            <option value="会友">会友</option>
+            <option value="游玩">游玩</option>
+            <option value="考试">考试</option>
+            <option value="培训">培训</option>
+            </select><br>
+        前14天是否去过重点疫区<br>
+        <select name="14天去疫区">
+            <option value="是">是</option>
+            <option value="否">否</option>
+        </select><br>
+        说明:
+        <textarea name="说明" rows="1" cols="20"></textarea><br><br>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </form>
+</body>
+</html>

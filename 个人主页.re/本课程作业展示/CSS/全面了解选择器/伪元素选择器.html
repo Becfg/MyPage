@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Html的简介</h3>
+    <p>HTML的全称为超文本标记语言，是一种标记语言。它包括一系列标签，通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。</p>
+    <br>
+    <h2 class="hover_highlight">这是鼠标悬停高亮效果</h2>
+    <br>
+    <a href="http://www.baidu.com">这是一个到百度的链接</a>
+    <style>
+        p::first-letter{
+            font-size: 2em;
+        }
+        p::first-line{
+            color: red;
+        }
+        .hover_highlight:hover{
+            color:blue;
+        }
+        a{
+            font-size: 2em;
+            text-decoration: none;/* 去掉下划线 */
+        }
+        a:link{
+            color: black;
+        }
+        a:visited{
+            color: rgb(162, 157, 255);
+        }
+        a:focus{
+            color:red;
+        }
+        a:hover{
+            color: red;
+            background-color: #98dad7;
+            cursor:crosshair;
+        }
+        a:active{
+            color: #98dad7;
+            background-color: red;
+        }
+    </style>
+</body>
+</html>

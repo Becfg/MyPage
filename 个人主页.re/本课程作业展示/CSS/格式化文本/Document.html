@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h3 class="headline">《天龙八部》节选</h3>
+        <p class="paragraph">
+            练武厅东坐着二人。上首是个四十左右的中年道姑，铁青着脸，嘴唇紧闭。下首是个五十余岁的老者，右手捻着长须，神情甚是得意。两人的座位相距一丈有余，身后各站着二十余名男女弟子。西边一排椅子上坐着十余位宾客。东西双方的目光都集注于场中二人的角斗。
+        </p>
+    </div>
+    <style>
+        .headline {
+            /* text-align设标题居中 */
+            text-align: center;
+            /*text-shadow设置阴影,颜色用silver*/
+            text-shadow: 10px 10px 1px silver;
+        }
+
+        .paragraph {
+            /* border边框：2px,红色，虚线 */
+            border: 2px red dashed;
+            /* padding内边距 0.5em */
+            padding: 0.5em;
+            /* font设一下字体 */
+            font: "微软雅黑";
+            /* text-indent:2em; 缩进2个字，em是当前字体尺寸*/
+            text-indent: 2em;
+            /* 行高line-height: 1.5em;改变行间距 */
+            line-height: 1.5em;
+            /*letter-spacing设字间距，用em作单位 */
+            letter-spacing: 0.5em;
+
+        }
+
+        /* 首字符*/
+        .paragraph::first-letter {
+            /* font-size字体大小2em */
+            font-size:2em;
+            /* font-style斜体 */
+            font-style:italic;
+            /* text-decoration带下划线 */
+            text-decoration: underline;
+        }
+    </style>
+</body>
+
+</html>
